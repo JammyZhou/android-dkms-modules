@@ -1,4 +1,4 @@
-ccflags-y += -I$(src) -Wno-int-conversion -DCONFIG_ANDROID_BINDERFS=1
+ccflags-y += -I$(src) -DCONFIG_ANDROID_BINDERFS=1
 obj-m := binder_linux.o
 binder_linux-y := binder_alloc.o binder.o binderfs.o
 
