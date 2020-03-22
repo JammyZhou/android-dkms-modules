@@ -10,6 +10,7 @@
 
 #define pr_fmt(fmt) "ashmem: " fmt
 
+#include <linux/module.h>
 #include <linux/init.h>
 #include <linux/export.h>
 #include <linux/file.h>
@@ -938,5 +939,5 @@ static void __exit ashmem_exit(void)
 module_init(ashmem_init);
 module_exit(ashmem_exit);
 
-MODULE_LICENSE("GPL");
+MODULE_LICENSE("GPL v2");
 

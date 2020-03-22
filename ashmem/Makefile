@@ -1,6 +1,6 @@
 ccflags-y += -I$(src) -Wno-error=implicit-int -Wno-int-conversion
 obj-m := ashmem_linux.o
-ashmem_linux-y := ashmem.o
+ashmem_linux-y := syms.o ashmem.o
 
 KERNEL_SRC ?= /lib/modules/$(shell uname -r)/build
 VZ=	$(shell uname -r | grep vz)
