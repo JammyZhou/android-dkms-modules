@@ -1,6 +1,6 @@
 ccflags-y += -I$(src) -DCONFIG_ANDROID_BINDERFS=1
 obj-m := binder_linux.o
-binder_linux-y := binder_alloc.o binder.o binderfs.o
+binder_linux-y := syms.o binder_alloc.o binder.o binderfs.o
 
 KERNEL_SRC ?= /lib/modules/$(shell uname -r)/build
 
