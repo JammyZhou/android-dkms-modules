@@ -924,4 +924,19 @@ out_free1:
 out:
 	return ret;
 }
-device_initcall(ashmem_init);
+
+static void __exit ashmem_exit(void)
+{
+        unregister_shrinker(&ashmem_shrinker);
+
+        misc_deregister(&ashmem_misc);
+
+        kmem_cache_destroy(ashmem_range_cachep);
+        kmem_cache_destroy(ashmem_area_cachep);
+}
+
+module_init(ashmem_init);
+module_exit(ashmem_exit);
+
+MODULE_LICENSE("GPL");
+
